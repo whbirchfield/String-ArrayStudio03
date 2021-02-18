@@ -30,5 +30,15 @@ cabinetNumber = Number(cabinetNumber);
 //d) Use bracket notation and a template literal to display the contents of the selected cabinet. If the user entered an invalid number, print an error message.
 
 console.log(cargoHold[cabinetNumber]);
+console.log("\n");
 
 //e) Modify the code to query the user for BOTH a cabinet in cargoHold AND a particular item. Use the 'includes' method to check if the cabinet contains the selected item, then print “Cabinet ____ DOES/DOES NOT contain ____.”
+
+cabinetNumber = input.question("Select a cabinet from 0-3 in the cargoHold: ");
+cabinetNumber = Number(cabinetNumber);
+cabinetItem = input.question("Please type desired item to check cabinet: ");
+if(cargoHold[cabinetNumber].includes(cabinetItem)){
+  console.log(`Cabinet ${cabinetNumber} DOES contain ${cabinetItem}.`);
+}else{
+  console.log(`Cabinet ${cabinetNumber} DOES NOT contain ${cabinetItem}.`)
+}
